@@ -1,0 +1,17 @@
+{
+  "name": "@absolutejs/esign-adapters",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "docusign",
+    "dropbox-sign"
+  ],
+  "scripts": {
+    "build": "bun run --filter './*' build",
+    "typecheck": "bun run --filter './*' typecheck",
+    "test": "bun test test"
+  },
+  "devDependencies": {
+    "@absolutejs/esign": "0.0.1"
+  }
+}

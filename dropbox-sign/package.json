@@ -1,0 +1,48 @@
+{
+  "name": "@absolutejs/esign-dropbox-sign",
+  "version": "0.0.1",
+  "description": "Dropbox Sign adapter for @absolutejs/esign",
+  "type": "module",
+  "license": "BSL-1.1",
+  "author": "Alex Kahn",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "changelog.json"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --external '@absolutejs/esign' && tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test ../test",
+    "check:package": "absolute-changelog check",
+    "prepublishOnly": "bun run typecheck && bun run test && bun run build && bun run check:package"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^22.0.0",
+    "@absolutejs/esign": "0.0.1",
+    "@absolutejs/changelog": "^0.6.0"
+  },
+  "peerDependencies": {
+    "@absolutejs/esign": "^0.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/absolutejs/esign-adapters.git",
+    "directory": "dropbox-sign"
+  }
+}

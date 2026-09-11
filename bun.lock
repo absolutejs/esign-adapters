@@ -1,0 +1,55 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "@absolutejs/esign-adapters",
+      "devDependencies": {
+        "@absolutejs/esign": "0.0.1",
+      },
+    },
+    "docusign": {
+      "name": "@absolutejs/esign-docusign",
+      "version": "0.0.1",
+      "devDependencies": {
+        "@absolutejs/changelog": "^0.6.0",
+        "@absolutejs/esign": "0.0.1",
+        "@types/node": "^22.0.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "@absolutejs/esign": "^0.0.1",
+      },
+    },
+    "dropbox-sign": {
+      "name": "@absolutejs/esign-dropbox-sign",
+      "version": "0.0.1",
+      "devDependencies": {
+        "@absolutejs/changelog": "^0.6.0",
+        "@absolutejs/esign": "0.0.1",
+        "@types/node": "^22.0.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "@absolutejs/esign": "^0.0.1",
+      },
+    },
+  },
+  "packages": {
+    "@absolutejs/changelog": ["@absolutejs/changelog@0.6.0", "", { "dependencies": { "typescript": "^5.8.3" }, "bin": { "absolute-changelog": "dist/cli.js" } }, "sha512-bsCCN7PVubSQ07dcaZgoE8M46QDOYMz9+Idc//bmxZd2KRK2wG7W5jqAIvjotD7mZD/6pVfGyNCxE+VNoYguvA=="],
+
+    "@absolutejs/esign": ["@absolutejs/esign@0.0.1", "", { "peerDependencies": { "@absolutejs/linked-providers": ">=0.0.6 <0.1.0" } }, "sha512-Wcb5y6FF89vyNejYYxjyO+wElPo3XY0ej7I9X088LC6r1q8pY/9bvIx59wHWGFDZAvTkNPUkhbMYptyhgibFqQ=="],
+
+    "@absolutejs/esign-docusign": ["@absolutejs/esign-docusign@workspace:docusign"],
+
+    "@absolutejs/esign-dropbox-sign": ["@absolutejs/esign-dropbox-sign@workspace:dropbox-sign"],
+
+    "@absolutejs/linked-providers": ["@absolutejs/linked-providers@0.0.7", "", {}, "sha512-psGUwqMQX/PZzbAqUVKzv/LnpG5j/k2NyRs6n9scHdajab0p7FwAkMYT75pzdYO24yVHXfntErcUwyYoAf4pVQ=="],
+
+    "@types/node": ["@types/node@22.20.2", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-xlvWf4Vs9n1PEVYwP1n4vvG07M6y8WgvJ2t0vbrWTmijsIHp1cS+uJ2kMIRdY3nHZK0nCYKrPeD171+SzF4/zw=="],
+
+    "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
+
+    "undici-types": ["undici-types@6.21.0", "", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
+  }
+}
